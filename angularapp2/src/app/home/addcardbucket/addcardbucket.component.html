@@ -1,0 +1,61 @@
+
+<header >
+    <div class="navbar navbar-dark bg-primary shadow-sm">
+   <div class="navbar-brand align-item-center d-flex">
+    <i class="fas fa-shipping-fast"></i>
+    <strong style="color: rgba(238, 244, 244, 0.941); margin-left: 12px;" ><i>Shpping site</i></strong>
+<div class="form-group">    
+    <input class="form-control mr-sm-7 " type="search" placeholder="Search" aria-label="Search">
+</div>
+<button routerLink="card" class="btn btn-primary byn"><i style="font-size: 30px;" class="fas fa-cart-plus"></i>
+<div style="font-size: 15px;" class="badge bg-danger">{{totalItem}}</div>
+</button>
+
+</div>
+    </div>
+</header>
+
+<ng-container *ngIf="product.length !=0" >
+<div class="container my-5">
+    <div class="card-table">
+        <div class="cart-product">
+            <table class="table table-respnsive">
+                <thead>
+                    <tr>
+                        <th>Sr.No</th>
+                        <th>Product Name</th>
+                        <th>Product Image</th>
+                        <th>Description</th>
+                        <th>Price</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of product let i=index">
+                        <td>{{i+1}}</td>
+                        <td>{{item.title}}</td>
+                        <td><img style="width:120px;" src="{{item.image}}" alt=""></td>
+                        <td>{{item.description}}</td>
+                        <td>{{item.price}}</td>
+                        <td><button class="btn btn-danger" (click)="removeItem(item)"><i class="fas fa-trash-alt"></i></button></td>
+                    </tr>
+                </tbody>
+            </table>
+            <button class="btn btn-primary" routerLink="/home">Shop more</button>
+        </div>
+    </div>
+</div>
+</ng-container>
+<ng-container *ngIf="product.length ==0" >
+    <div class="container">
+        <div class="card">
+    <h5 class="card-title" style="font-weight: bolder; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">My Card</h5>
+        </div>
+        <div class="center">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-W_FqguiTh0sb46Pg_LN8OaIiVHBKaCQ2_Q&usqp=CAU" alt="">
+        <!-- <h4>Your cart is empty!</h4> -->
+        <h4>Add item to it now</h4>
+        <button class="btn btn-primary" routerLink="/home" >Shop Now</button>
+        </div>
+    </div>
+</ng-container>

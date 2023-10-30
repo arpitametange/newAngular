@@ -1,0 +1,14 @@
+<p>attribute-directive works!</p>
+<div [ngStyle]="{'color':'red','background-color': '#ddd'}">Lorem ipsum, dolor sit amet consectetur adipisicing.</div>
+<div [ngStyle]="{'color':colorp,'background-color':'red'}">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex.</div>
+
+
+<ul *ngFor="let g of array">
+    <li [ngClass]="{
+        'text-success':g.name=='arpita',
+        'text-danger': g.name == 'arati'
+
+    }">
+{{g.name}}</li>
+
+</ul>

@@ -1,0 +1,5 @@
+<p>postlist works!</p>
+<table><thead><tr><td>userid</td><td>id</td><td>title</td></tr></thead>
+<tbody><tr *ngFor="let t of array"><td>{{t.userId}}</td>
+<td><a [routerLink]="['/postdetails', t.id]">{{t.id}}</a></td>
+<td>{{t.title}}</td></tr></tbody></table>

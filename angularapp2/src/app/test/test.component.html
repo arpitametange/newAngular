@@ -1,0 +1,17 @@
+<!-- <label for="">add name</label><input type="text">
+<h1 class="h1">arpita</h1> -->
+<!-- <button  (click)="functionNew()"></button> -->
+<!-- <button (click)="methodd()">button</button> -->
+<div><h1>password Generator </h1></div>
+<div>Enter Length<input (input)="enternumbers($event.target.value)"></div>
+<div>Entter the Symbols <input type="checkbox"    (change)="symbolsEnter()" ></div>
+<div>Entter the characters <input type="checkbox" (change)="charactersEnter()" ></div>
+<div>Entter the Numbers <input type="checkbox"    (change)="numbersEnter()" ></div>
+
+ <button  (click)="onbuttonclick1()" >Generate</button>
+
+<div> Your password<input [value]="password1"></div>
+
+<!-- <app-practice  (nameForOutput)="parentFun($event)"></app-practice> -->
+
+<div><button (click)="shouldFun()">should</button></div>

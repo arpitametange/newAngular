@@ -1,0 +1,40 @@
+
+<p>templateforms works!</p>
+<div class="container bg-light ">
+    <div class=" row justify-content-center">
+        <div class="col-md-7 text-left rounded shadow py-5">
+
+        <form action="" #myform="ngForm" (ngSubmit)="onSubmit(myform)">
+            <div class="container row"><h1 class=" justify-content-center col-md-7 text-info">Login form </h1></div>
+       <div ngModelGroup="group" #group="ngModelGroup">
+            <div class="form-group">
+            <label for="usernameshow">Enter username</label>
+        <input class="form-control" type="text" required id="usernameshow" name="usernameshow" [ngModel]="defaultusername" placeholder="username">
+    </div>
+    <div  class="form-group">
+        <label for="email">Enter Email</label>
+        <input email required type="text" class="form-control" name="emailshow" id="emailshow" placeholder="enter email" [ngModel]="valuedefault">
+    </div>
+</div>
+    <div class="form-group">
+        <label for="exampleInputPassword1">Password</label>
+        <input type="password" name="passwordshow" class="form-control" id="exampleInputPassword1" ngModel>
+      </div>
+
+    <div class="form-group form-check">
+        <input type="checkbox" name="checkbox"  class="form-check-input" id="exampleCheck1" ngModel>
+        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+      </div>
+
+  
+  <button type="submit" [disabled]="!myform.valid"  class="btn btn-primary">Submit</button>
+  <div *ngIf="issubmit">
+    <p>{{userts.email1}}</p>
+    <p>{{userts.password1}}</p>
+    <p>{{userts.userName}}</p>
+  </div>
+    
+</form>
+</div>
+</div>
+</div>

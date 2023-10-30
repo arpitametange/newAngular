@@ -1,0 +1,13 @@
+.img{
+    border-radius: 50px;
+    border: 1px solid red;
+}
+
+.vid{
+    position: relative;
+    top: 20px;
+    left:600px;
+    height:200px ;
+    width: 300px;
+
+}

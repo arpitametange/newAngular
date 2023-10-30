@@ -1,0 +1,25 @@
+<p>pra2 works!</p>
+
+
+<form action="" [formGroup]="myreactiveform" (ngSubmit)="onsubmit()">
+    <div>
+        <input type="text" formControlName='user'>
+        <label for="">Username</label>
+        <small *ngIf="!myreactiveform.get('user').valid && myreactiveform.get('user').touched">please enter the data in field</small>
+        <small *ngIf="myReactiveForm.get('user').errors['error']">User name not allowed</small>
+      </div>
+    <div>
+        <input type="text" formControlName='password' formArrayName="array">
+        <label for="">password</label>
+        <button (click)="click">onaddskills</button>
+    </div>
+    <div>
+        <input type="text">
+        <label for=""></label>
+    </div>
+    <div>
+        <input type="text">
+        <label for=""></label>
+    </div>
+    <button type="submit">submit</button>
+</form>

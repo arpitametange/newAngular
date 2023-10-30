@@ -1,0 +1,12 @@
+<p>c1 works!</p>
+<button (click)="stand()">stand</button>
+<p *ngIf="showmeto; else elseBolck">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+</p>
+<ng-template #elseBolck>arpita metange else block</ng-template>
+
+Enter the length<input required (input)="inputEvent($event.target.value)">
+select the symbol <input type="checkbox" (change)="changeSym()">
+select the number <input type="checkbox" (change)="changeNumber()">
+select the albhabet <input type="checkbox" (change)="changeAlphabet()">
+<button (click)="onclick()">generate</button>
+<input [value]="password">

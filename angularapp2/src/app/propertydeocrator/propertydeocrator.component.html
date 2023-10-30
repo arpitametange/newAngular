@@ -1,0 +1,23 @@
+<p>propertydeocrator works!</p>
+<button (click)="funceven()">event</button>
+<ul *ngFor="let p of arrya">
+    <li [ngClass]="{'text-danger':p.name=='arpita'}">{{p.name}}</li>
+
+</ul>
+<div *ngIf="ifstate; else temp">this is the true part</div>
+<ng-template #temp>this is the else part</ng-template>
+<select name="" id="" (change)="getselected($event)"><option value="tv">tv</option>
+    <option value="r">r</option>
+    <option value="tel">tel</option>
+    <option value="id">id</option><option value="tv">tv</option>
+
+</select>
+<div [ngSwitch]="selected">
+    <p *ngSwitchCase="'tv'">tv</p>
+    <p *ngSwitchCase="'id'">tv2</p>
+
+</div>
+<p [ngStyle]="{'color':'red'}">arpita</p>
+<p appCustomDirective>hellowthere</p>
+<p appCustomDirective2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti est at earum error reiciendis. Quas ad placeat, incidunt voluptatibus accusamus, magni neque, facilis esse ipsum commodi obcaecati fuga nostrum facere?
+</p>

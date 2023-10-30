@@ -1,0 +1,25 @@
+<p>ng-for-assi works!</p>
+<div class="select">
+    <h4 class="country">Select Country</h4> 
+<select (change)="onClick($event)">
+    <option value="">Select Country</option>
+    <option value="{{c.id}}" *ngFor="let c of countries">{{c.name}}</option>
+</select>
+<select class="sele">
+    <option value="">Select States</option>
+    <option value="{{s.id}}" *ngFor="let s of states">{{s.name}}</option>
+</select>
+</div>
+
+<div class="select">
+    <h4 class="country">Select Country</h4> 
+<select  (change)="funfor($event)">
+    <option value="">Select Country</option>
+    <option *ngFor="let c of country1"  value="{{c.id}}">{{c.stateName}}</option>   
+</select>
+<select class="sele">
+    <option value="">Select States</option>
+    <option value="{{p.id}}" *ngFor="let p of state12">{{p.stateName}}</option>
+</select>
+
+</div>

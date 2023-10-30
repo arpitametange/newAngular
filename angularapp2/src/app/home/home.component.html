@@ -1,0 +1,45 @@
+
+<!-- <p>home works!</p>
+
+<p>why not worked</p> -->
+<header >
+    <div class="navbar navbar-dark bg-primary shadow-sm">
+   <div class="navbar-brand align-item-center d-flex">
+    <i class="fas fa-shipping-fast"></i>
+    <strong style="color:white; margin-left: 12px; font-size: larger;" ><i>Shpping Site</i></strong>
+<div class="form-group">    
+    <input class="form-control mr-sm-7 " type="search" placeholder="Search" aria-label="Search">
+</div>
+<button routerLink="card" class="btn btn-primary byn"><i style="font-size: 30px;" class="fas fa-cart-plus"></i>
+<div style="font-size: 15px;" class="badge bg-danger">{{totalItem}}</div>
+</button>
+
+</div>
+    </div>
+</header>
+<!-- <div>
+    
+    <div><div *ngFor="let item of array">
+        <div class="card col-md-3">
+    <img src="{{item.image}}" alt="">
+    <p><strong>price:</strong>{{item.price}}</p>
+    <button >add to cart</button>
+        </div>
+    </div></div>
+</div> -->
+<!-- <router-outlet></router-outlet> -->
+
+<div class="container">
+    <div class="row">
+        <ng-container *ngFor="let item of array">
+            <div class="card col-md-3">
+                <img src="{{item.image}}" alt="">
+                <h5 style="white-space: nowrap;overflow:hidden;text-overflow: ellipsis;max-width: 100ch;">{{item.title}}</h5>
+                <p style="white-space: nowrap;overflow:hidden;text-overflow: ellipsis;max-width: 100ch;">{{item.description}}</p>
+                <p><strong>Price:</strong> ${{item.price}}</p>
+                <button class="btn btn-primary" (click)="addtocart(item)">Add to card</button>
+            </div>
+
+        </ng-container>
+    </div>
+</div>

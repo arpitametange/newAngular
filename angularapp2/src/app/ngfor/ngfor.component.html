@@ -1,0 +1,15 @@
+<p>ngfor works!</p>
+<div>
+    <table>
+        <thead><tr><th> no</th>
+            <th>name</th>
+            
+           <th>date</th> <th>id</th></tr></thead>
+           <tbody><tr *ngFor="let ClassName of arrayName let i=index" >
+                {{i+1}}  <td>{{ClassName.no}}</td>
+                  <td>{{ClassName.name}}</td>
+                  <td>{{ClassName.date}}</td>
+                  <td>{{ClassName.id}}</td>
+           </tr></tbody>
+    </table>
+</div>

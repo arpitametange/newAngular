@@ -1,0 +1,16 @@
+<p>pipe works!</p>
+<div><input type="text" #input>
+<button (click)="add(input.value)">add</button>
+</div>
+<div><input type="text" [(ngModel)]='namesearch'></div>
+<table>
+<thead><tr><th></th></tr></thead>
+<tbody>
+    <tr *ngFor="let t of array | filter:namesearch">
+        <td>{{t.id}}</td>
+        <td>{{t.name}}</td>
+        <td>{{t.price}}</td>
+
+    </tr>
+</tbody>
+</table>

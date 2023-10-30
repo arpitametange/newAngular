@@ -1,0 +1,20 @@
+<p>practice2 works!</p>
+
+<input type="text" [(ngModel)]="giga"/>
+{{giga}}
+
+<div *ngIf="content; else elseBolck">
+    lorem box
+</div>
+<ng-template #elseBolck>esle block loremmm</ng-template>
+
+<!-- <div  *ngFor="let t of array">{{t.name}}</div>
+<p [ngClass]="{'text-success':t.name=='ankita'}">{{t.name}}</p>
+<div [ngSwitch]="color" >
+    <div *ngSwitchCase="'pink'">{{color}}</div>
+    <div *ngSwitchCase="'red'">{{color}}</div>
+    <div *ngSwitchCase="'blue'">{{color}}</div>
+    <div *ngSwitchCase="'green'">this is the greeen color</div> -->
+
+<!-- </div> -->
+<!-- <p [ngStyle]="{'color':'red'}">ngstyle</p> -->

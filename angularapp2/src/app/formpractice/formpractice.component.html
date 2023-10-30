@@ -1,0 +1,47 @@
+<!-- <form (ngSubmit)="onSubmit(mytemplateform)" #mytemplateform="ngForm"  class="py-3">
+    <div class="form-group">
+        <label for="">username :</label>
+        <input type="text" id="username" name="username" class="form-control" #username="ngModel" required ngModel>
+      <small class="text-danger" *ngIf="!username.valid && username.touched">invalid data</small>
+    </div>
+    <div class="formGroup">
+        <label for="">email</label>
+        <input type="text" name="email" #email="ngModel" email required id="email" ngModel>
+        <small class="text-danger" *ngIf="!email.valid && email.touched">Please enter valid domain email</small>
+    </div>
+
+
+    <button type="submit" >submit</button>
+   
+</form>
+<div *ngIf="issubmitted">
+<p>    Username  {{username.username}}
+</p>    
+<p>email  {{username.Email}}</p>
+  </div>
+ -->
+
+<div class="container">
+<h1>reactive form</h1>
+  <form action="" (ngSubmit)="onSubmit()" [formGroup]="myform">
+<div class="form-group"><input type="text" class="form-control" formControlName="user">
+<div> <small class="text-danger" *ngIf="!myform.get('user').valid && myform.get('user').touched">
+  <small *ngIf="myform.get('user').errors['error']">please enter other name</small>
+
+  Please enter valida data</small> 
+</div>
+</div>
+
+<div class="form-group">    
+  <input type="email" name="" id="" class="form-control" formControlName="email">
+</div>
+<div formArrayName="array">
+  <ng-container *ngFor="let r of myform.get('Array').controls; index as i">
+    <input type="text"  formArrayName="{{i}}">
+
+  </ng-container>
+</div>
+<button (click)="onclickaddd()">addskills</button>
+<button type="submit">submit</button>
+  </form>
+</div>

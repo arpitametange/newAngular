@@ -1,0 +1,22 @@
+<p  *ngIf="yourName; else elseblock">ng-for2 works!</p>
+<ng-template #elseblock>else block it is !!!</ng-template>
+<table>
+    <thead>
+        <tr>
+            <th>name</th>
+            <th>id</th>
+            <td>no</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let ClassName2 of  array ">
+            <td>{{ClassName2.name}}</td>
+            <td>{{ClassName2.id}}</td>
+            <td>{{ClassName2.description}}</td>
+        </tr>
+    </tbody>
+</table>
+
+<p  *ngFor="let cl of newArray">
+    {{cl.name1}}
+</p>
